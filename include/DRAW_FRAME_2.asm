@@ -7,9 +7,11 @@
 ;        al - y cordinate                               
 ;        dh - width
 ;        dl - height
-; Expects: ES = 0B800h                                                                                                               
+; Expects: ES = 0B800h   
+;                                                                                                            
 ; Overwrites: AX, CX, BX, DX, DI, SI
 ; Calls: DRAW_LINE
+;
 ; Note: this function uses fact, that after 
 ;       DRAW_LINE call di points to end of line
 ;------------------------------------------------
