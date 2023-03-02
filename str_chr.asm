@@ -14,7 +14,9 @@
 ;------------------------------------------------
 ; STDCALL convection
 ; Enter: str_chr (buf addres, symbol, end_of_string)
-; Exit: ax - length
+; Exit: ax - addres
+;
+; Overwrites: bx, cx
 ;------------------------------------------------
 %assign MAX_STR_LENGTH 0FFFFh
 str_chr:
