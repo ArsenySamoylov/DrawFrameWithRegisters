@@ -1,10 +1,12 @@
 ; @TODO
-; memchr (basicly strchr, but cx is parametr)
-; strcpy 
-; memcpy (*destination, *source, number of symbols)
-; memcmp
-; memset
-; strcmp
+; strlen +
+; strchr + 
+; memchr - (basicly strchr, but cx is parametr)
+; strcpy + 
+; memcpy + (*destination, *source, number of symbols)
+; memset + 
+; memcmp + 
+; strcmp - (basicly memcpm)
 
 ;------------------------------------------------
 ; Strchr - return addres of first symbol from 
@@ -17,6 +19,8 @@
 ; Exit: ax - addres
 ;
 ; Overwrites: bx, cx
+; NOTE: be accurate with DS here I don't work with 
+;       them
 ;------------------------------------------------
 %assign MAX_STR_LENGTH 0FFFFh
 str_chr:

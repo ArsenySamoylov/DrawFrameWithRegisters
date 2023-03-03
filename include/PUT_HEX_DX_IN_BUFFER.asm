@@ -4,7 +4,7 @@
 ; ('$' not included)
 ;------------------------------------------------
 ; Entry: DX - value to be displayed
-;        SI - buffer address
+;        DS:SI - buffer address
 ; Exit: none
 ; Overwrite: AX, BX, CH, SI, DX 
 ;------------------------------------------------
@@ -21,7 +21,7 @@ PUT_HEX_DX_IN_BUFFER:
     shr al, 4
     xlat    
 
-    mov [si], al
+    mov ds:[si], al
 
     add si, 1h
     shl dx, 4h

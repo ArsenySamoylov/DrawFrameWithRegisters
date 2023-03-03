@@ -4,7 +4,7 @@
 ; ('$' not included)
 ;------------------------------------------------
 ; Entry: AX - value
-;        BX - address
+;        DS:BX - address
 ; Overwrites: AX
 ;------------------------------------------------
 PUT_DECIMAL_IN_BUFFER:
@@ -21,17 +21,17 @@ PUT_DECIMAL_IN_BUFFER:
     add dl, '0' ; after div dx hold remainder, so dl + '0' - is proper symbol
     push dx         
 %endrep
-
+ 
 
 %rep 5
     ; PUT SYMBOL IN PROPER ORDER IN THE BUFFER
     pop dx 
-    mov byte [bx], dl 
+    mov byte ds:[bx], dl 
     
     inc bx
 %endrep
     
-    lea bx, byte [bx - 5h] ; restore bx (suka)
+    lea bx, byte ds:[bx - 5h] ; restore bx (suka)
     pop cx                 ; restore cx
     pop dx                 ; restore dx
     

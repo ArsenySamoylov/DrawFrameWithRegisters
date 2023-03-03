@@ -1,6 +1,6 @@
 all: clear 
 
-	nasm -wall frame.asm -o TEST.com -I./include -I./macroses
+	nasm -wall key.asm -I./include -I./macroses -o START.com
 
 clear:
-	rm -rf TEST.com
+	rm -rf START.com

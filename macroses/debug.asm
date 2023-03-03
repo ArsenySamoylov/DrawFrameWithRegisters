@@ -33,8 +33,7 @@
 %defstr reg__ %1
 .MES: db     reg__, " : "
 .DEC_BUF: db "_____d, "
-.HEC_BUF: db "____h, "
-.BIT_BUF: db "________________b$"
+.HEC_BUF: db "____h$"
     
 .end:    __GETCH
     nop
