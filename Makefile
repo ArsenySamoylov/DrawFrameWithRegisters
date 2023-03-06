@@ -4,3 +4,6 @@ all: clear
 
 clear:
 	rm -rf START.com
+
+int: int.asm
+	nasm int.asm -o int.com -I./include

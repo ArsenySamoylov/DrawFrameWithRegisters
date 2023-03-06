@@ -4,7 +4,7 @@
 ;       of the memory areas s1 and s2
 ;-----------------------------------------------------
 ; Entry: memcpm( *s1, *s2, unsigned n)
-; Exit: ax - 0 if eqaul, 1 if not equal
+; Exit: ax - 0 if equal, 1 if not equal
 ;       di, si - points to first umatched symbols if ax = 1
 ; Overwrites: di, si
 ; Note: ES !!!!! DS!!! be carefull!!!!

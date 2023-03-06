@@ -3,7 +3,7 @@
 ;------------------------------------------------
 ; Entry: ah - color atr
 ;        al - symbol 
-; Expects:    ES = 800H
+; Expects:    ES = b800H
 ; Overwrites: BX, CX
 ; Exit:       none
 ;------------------------------------------------
