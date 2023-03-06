@@ -9,7 +9,7 @@ New09IntHandler:
     push ds 
     
     db 0B8h         ;| mov ax, selector value 
-.selector: dw 0h    ;| dupricated, you can use cs
+.selector: dw 0h    ;| deprecated, you can use cs
                     ;|
     mov ds, ax      ;>
 

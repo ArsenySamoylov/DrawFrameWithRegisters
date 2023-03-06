@@ -13,7 +13,7 @@ Start:
 
     ; Save selector for proper work
     mov [New09IntHandler.selector], ds ; |
-    mov [New08IntHandler.selector], ds ; > dupricated, you can use cs
+    mov [New08IntHandler.selector], ds ; > deprecated, you can use cs
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
     ; Set keyboard handler
     cli ; stop interupts
@@ -65,9 +65,6 @@ Start:
     shr dx, 4
     inc dx
     int 21h
-
-    __EXIT 0
-
 
 %include "Int9Handler.asm"
 %include "Int8Handler.asm"

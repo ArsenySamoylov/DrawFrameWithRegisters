@@ -24,14 +24,14 @@
     mov es:[bx + 2h], ah
     mov byte es:[bx + 4h], ':'
 
-    mov byte es:[bx+1h], %2 +1h; | (because of the color, there is trouble 
-    mov byte es:[bx+3h], %2 +1h; |  with restoring colorsa attributes for sp
-    mov byte es:[bx+5h], %2 +10h; > color
+    mov byte es:[bx+1h], 3h; | (because of the color, there is trouble 
+    mov byte es:[bx+3h], 3h; |  with restoring colorsa attributes for sp
+    mov byte es:[bx+5h], 3h; > color
 
     add bx, 6h
     mov di, value_buf
 
-    mov ch, %2 + 1h ; color for number
+    mov ch, 3h ; color for number
 %rep 4
     mov cl, [di]       ; put  value on screen
     mov es:[bx], cx    ; 

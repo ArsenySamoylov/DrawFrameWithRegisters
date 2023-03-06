@@ -9,7 +9,7 @@ New08IntHandler:
     
     push ds    ; save sd     
 
-    db 0B8h         ; | (dupricated, you can use cs)
+    db 0B8h         ; | (deprecated, you can use cs)
 .selector: dw 0h    ; | mov ax, selector value
     mov ds, ax      ; > set ds for addresing
 
@@ -63,5 +63,5 @@ New08IntHandler:
     pop si
     jmp .@
 
-%include "DRAW_FRAME.asm" ; why not draw frame 3 ???? (becasu this one works well :) )
+%include "DRAW_FRAME.asm" ; why not draw frame 3 ???? (because this one works well :) )
 %include "draw_regs.asm"
